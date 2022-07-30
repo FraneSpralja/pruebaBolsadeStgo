@@ -12,14 +12,16 @@
 
 const myHeaders = new Headers();
 myHeaders.append('accept', 'application/json');
-myHeaders.append('x-apikey', 'kJC28duKU3puWCv5Zb3NJEKrcCYVzAY5');
-myHeaders.append('Referer', 'https://www.inteligenciaf.com');
+myHeaders.append('x-apikey', 'sSod6lQHpIz6C9KLGxx3AbBYrkmMSJYj');
+myHeaders.append('Referer', 'https://franespralja.github.io/pruebaBolsadeStgo/');
 
 const header = myHeaders;
 
-const url = 'https://apiprogram.bci.cl/sandbox/v1/api-economic-indicators/list/?query-date=YYYY-MM-DD';
+const url = 'https://apiprogram.bci.cl/sandbox/v1/api-economic-indicators/list/?query-date=2022-07-28';
 
-fetch(url, header)
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+setTimeout(() => {
+    fetch(url, header)
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+},3000)
